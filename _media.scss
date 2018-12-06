@@ -1,0 +1,187 @@
+@media(min-width: 576px) {
+    .wrap {
+        header {
+            nav {
+                .brand {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .add {
+                font-size: 1.5rem;
+
+                p:nth-child(2) {
+                    font-size: 2rem;
+                }
+
+                button {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        section.latest {
+            .sale {
+                background-position-x: 66%;
+            }
+        }
+
+        section.sub {
+            text-align: center;
+
+            input {
+                width: 80%;
+            }
+        }
+    }
+
+}
+
+@media(min-width: 768px) {
+
+    .wrap {
+
+        p.title {
+            font-size: 1.5rem;
+        }
+
+        header {
+            background-image: url(../img/color_overlay.png), url(../img/header_medium.png);
+
+            nav {
+                .brand {
+                    font-size: 3rem;
+                }
+            }
+
+            .add {
+                font-size: 2rem;
+
+                p:nth-child(2) {
+                    font-size: 2.5rem;
+                }
+            }
+
+        }
+
+        section.trending {
+            min-height: auto;
+
+            h2 {
+                margin-top: 0;
+            }
+
+            img {
+                margin-bottom: 5vh;
+            }
+        }
+
+        section.sub {
+            text-align: left;
+
+            p {
+                padding: 3vh 0 2vh 0;
+                text-align: left;
+                font-size: 0.7rem;
+            }
+
+            input {
+                width: 78%;
+                margin-bottom: 5vh;
+            }
+
+            .subbtn {
+                position: relative;
+
+                button {
+                    position: absolute;
+                    top: 44%;
+                    left: -4%;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 992px) {
+
+    .wrap {
+
+        header {
+            background-image: url(../img/color_overlay.png), url(../img/header_maxi.png);
+
+            button:hover {
+                @include btnHover(#fff, #000);
+                border-color: #fff;
+            }
+        }
+
+        section.latest {
+
+            .pic.active::after {
+                opacity: 0;
+                transition: .4s;
+            }
+
+            .pic:hover::after {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+        }
+
+
+
+        section.trending {
+            img {
+                margin: 0 0 5vh 0;
+            }
+
+            p {
+                margin-bottom: 4vh;
+            }
+
+            button:hover {
+                @include btnHover(#000, #fff)
+            }
+        }
+
+        section.blog,
+        section.sub {
+            button:hover {
+                @include btnHover(#000, #fff);
+                border-color: #000;
+            }
+        }
+
+        section.sub {
+            background-image: url(../img/sub_bg.png);
+            @include setBg();
+            background-size: content;
+        }
+    }
+
+}
+
+@media(min-width: 1200px) {
+
+    .wrap {
+        section.sub {
+            input {
+                width: 70%;
+
+            }
+        }
+    }
+}
+
+@media(orientation: landscape) and (max-width: 767px) {
+    .wrap {
+        section.latest {
+            .pic {
+                height: 80vh;
+            }
+        }
+    }
+
+}
